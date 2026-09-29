@@ -54,6 +54,7 @@ nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500;
 nav a{text-decoration:none;color:var(--ink);padding-block:6px;border-bottom:2px solid transparent}
 nav a:hover{border-bottom-color:var(--pink)}
 .hd-call{font-size:.9rem;padding:10px 16px;white-space:nowrap;flex-shrink:0}
+.hd-call .short{display:none}
 @media(max-width:940px){nav{display:none}}
 
 /* hero */
@@ -356,6 +357,54 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
 @media(max-width:1000px){.prog-grid{grid-template-columns:1fr;gap:14px}.prog{grid-template-columns:1.5fr 1fr}.prog-txt{padding:18px 20px}}
 @media(max-width:480px){.prog{grid-template-columns:1fr}.prog-img{aspect-ratio:16/8;min-height:0}.prog-txt{order:1}.prog-img{order:0}}
 @media (prefers-reduced-motion: reduce){.prog{transition:none}}
+
+/* mobile menu */
+.hd-right{display:flex;align-items:center;gap:8px}
+.hamb{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.hamb span{display:block;width:18px;height:2px;background:var(--navy);border-radius:2px;transition:transform .15s,opacity .15s}
+.hamb.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamb.on span:nth-child(2){opacity:0}
+.hamb.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mmenu{border-top:1px solid var(--line);background:#fff;display:grid}
+.mmenu a{padding:14px 20px;text-decoration:none;color:var(--ink);font-weight:500;border-bottom:1px solid var(--line)}
+.mmenu a:last-child{border-bottom:0}
+@media(max-width:940px){
+  .hamb{display:flex}
+  .brand b{font-size:.98rem}
+  .brand small{display:none}
+  .brand img{width:36px;height:36px}
+  .hd-call{padding:9px 12px;font-size:.85rem}
+  header .wrap{height:64px}
+}
+@media(max-width:520px){.brand b{font-size:.92rem}.hd-call{padding:9px 12px;font-size:.85rem}.hd-call .full{display:none}.hd-call .short{display:inline}}
+/* mobile layout tweaks */
+@media(max-width:860px){
+  .hero .art{order:1;margin-top:8px}
+  .hero .art img.hero-photo{aspect-ratio:16/9;max-width:none}
+  .hero ul{font-size:.9rem}
+  .strip .cell{padding:18px 12px}
+  .strip .cell small{font-size:.78rem;margin-bottom:4px}
+  .strip .cell b{font-size:1rem}
+  .steps6{grid-template-columns:repeat(3,1fr);gap:6px}
+  .steps6 li::after,.steps6 li::before{display:none!important}
+  .steps6 li{padding:8px 4px}
+  .steps6 .i{width:44px;height:44px}
+  .steps6 b{font-size:.88rem}
+  .gal4{grid-template-columns:1fr 1fr;gap:10px}
+  .gal figcaption{font-size:.76rem;margin-top:4px}
+  .sec{padding-block:48px}
+  .pop-box{border-radius:12px}
+  .pop-body{padding:10px;gap:10px}
+  .pop-head,.pop-foot{padding:10px 14px}
+}
+@media(max-width:480px){
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip .cell{border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+  .strip .cell:nth-child(2n){border-right:0}
+  .strip .cell:nth-child(n+3){border-bottom:0}
+  .steps6{grid-template-columns:repeat(3,1fr)}
+  .steps6 li:nth-child(even)::after,.steps6 li:nth-child(even)::before{display:none!important}
+}
 </style>
 
 
@@ -374,7 +423,18 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
         <li><a href="https://naver.me/xJibTFVW" target="_blank" rel="noopener">오시는 길</a></li>
       </ul>
     </nav>
-    <a class="btn btn-navy hd-call" href="tel:031-262-1514">031-262-1514</a>
+    <div class="hd-right">
+      <a class="btn btn-navy hd-call" href="tel:031-262-1514"><span class="full">031-262-1514</span><span class="short">전화</span></a>
+      <button class="hamb" id="hamb" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mmenu" id="mmenu" hidden>
+    <a href="#/">홈</a>
+    <a href="#/intro">교육원 소개</a>
+    <a href="#/caregiver">요양보호사 소개</a>
+    <a href="#/course">교육과정</a>
+    <a href="#/hospital">병원동행매니저 · 생활지원사</a>
+    <a href="https://naver.me/xJibTFVW" target="_blank" rel="noopener">오시는 길 (네이버 지도)</a>
   </div>
 </header>
 <div id="top"></div>
@@ -977,7 +1037,11 @@ function goContact(e){e.preventDefault();if(location.hash&&location.hash!=='#/')
     document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.id===id);});
     window.scrollTo(0,0);
   }
-  window.addEventListener('hashchange',route); route();
+  window.addEventListener('hashchange',function(){route();closeMenu();}); route();
+  var hb=document.getElementById('hamb'),mm=document.getElementById('mmenu');
+  function closeMenu(){mm.hidden=true;hb.setAttribute('aria-expanded','false');hb.classList.remove('on');}
+  hb.addEventListener('click',function(){var open=mm.hidden;mm.hidden=!open;hb.setAttribute('aria-expanded',open?'true':'false');hb.classList.toggle('on',open);});
+  mm.addEventListener('click',function(e){if(e.target.tagName==='A')closeMenu();});
 })();
 </script>
 

@@ -876,6 +876,21 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
 .qmenu a small{display:block;font-size:.8rem;font-weight:500;color:var(--ink-2);margin-top:2px}
 .qmenu a:after{content:"›";margin-left:auto;font-size:1.5rem;color:var(--pink);font-weight:900}
 @media(max-width:860px){.qmenu{padding-bottom:28px}.qmenu .wrap{grid-template-columns:1fr 1fr;gap:8px}.qmenu a{padding:14px 10px;font-size:.95rem;gap:8px}.qmenu a .ic-r{width:34px;height:34px}.qmenu a small{font-size:.72rem}.qmenu a:after{font-size:1.2rem}}
+
+@media(max-width:760px){
+  .vs,.vs.vs2{grid-template-columns:1fr 1fr;gap:6px;position:relative;align-items:stretch}
+  .vs-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0;width:38px;height:38px;font-size:.78rem}
+  .vs-head{padding:10px 10px;font-size:.84rem;gap:6px}
+  .vs-ic{width:22px;height:22px;font-size:.8rem}
+  .vs-col ul{padding:10px 10px 12px;gap:8px;font-size:.8rem}
+  .vs-col li{padding-left:10px}
+  .vs2 .vs-col li{grid-template-columns:1fr;gap:0}
+  .vs2 .vi{display:none}
+  .vs2 .vs-col li b{font-size:.82rem;line-height:1.35}
+  .vs2 .vs-col li small{font-size:.72rem;line-height:1.35}
+  .vs2 .vs-col ul{gap:10px}
+  .vs-foot{margin:0 8px 10px;padding:8px 6px;font-size:.74rem;line-height:1.4}
+}
 .hs-big{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .hs-big div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;text-align:center}
 .hs-big b{display:block;font-size:2rem;font-weight:900;color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
@@ -1099,7 +1114,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
       <div class="fm-ar">→</div>
       <div class="fm fm-end"><small>수료 후 취업 · 6개월 근속</small><b>전액 환급</b><em>792,000원 돌려받음</em></div>
     </div>
-    <p class="tbl-note" style="text-align:center;margin-top:18px">훈련장려금은 실업 상태 등 요건 충족 시 지급됩니다. 본인 해당 여부는 전화 한 통이면 확인해 드립니다. 카드가 없어도 발급 절차부터 함께 진행합니다.</p>
+    <p class="tbl-note" style="text-align:center;margin-top:18px">훈련장려금은 실업 상태 등 요건 충족 시 지급됩니다.<br>본인 해당 여부는 전화 한 통이면 확인해 드립니다.<br>카드가 없어도 발급 절차부터 함께 진행합니다.</p>
   </div>
 </section>
 <section class="rv-in sec process" style="padding-block:52px">
@@ -1401,7 +1416,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h6M9 16h6"/></svg></span><h4>과목별 모의시험</h4><p>취약 부분을 미리 찾아 반복합니다</p></div>
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><h4>시험 접수 · CBT 연습</h4><p>접수 방법과 컴퓨터 시험 응시까지 함께 준비하고, 수료 직후 가장 빠른 시험에 응시하도록 일정을 잡습니다</p></div>
     </div>
-    <p class="tbl-note">"이 나이에 무리다"라고 생각하셨다면, 상담 때 그 말씀 그대로 해주세요. 그 말을 듣고 합격하신 선생님들이 계십니다.</p>
+    <p class="tbl-note">"이 나이에 무리다"라고 생각하셨다면, 상담 때 그 말씀 그대로 해주세요.<br>그 말을 듣고 합격하신 선생님들이 계십니다.</p>
   </div>
 
   <div class="block rv-in">
@@ -1548,7 +1563,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
       <div class="fm-ar">→</div>
       <div class="fm fm-end"><small>수료 후 취업 · 6개월 근속</small><b>전액 환급</b><em>792,000원 돌려받음</em></div>
     </div>
-    <p class="tbl-note">※ 훈련장려금 지급 대상은 실업 상태인 분입니다. 실업급여 수령 중, 사업자등록(임대사업자 포함) 보유, 주 15시간 이상 근로 중이신 분은 제외됩니다. 해당 여부는 전화 한 통이면 확인해 드립니다. 병원동행매니저·생활지원사(2개 150,000원)는 요양보호사 기수 수강생에게 10% 추가 할인 → 135,000원. <a href="#/hospital">자세히</a></p>
+    <p class="tbl-note">※ 훈련장려금 지급 대상은 실업 상태인 분입니다.<br>실업급여 수령 중, 사업자등록(임대사업자 포함) 보유, 주 15시간 이상 근로 중이신 분은 제외됩니다.<br>해당 여부는 전화 한 통이면 확인해 드립니다.<br>병원동행매니저·생활지원사(2개 150,000원)는 요양보호사 기수 수강생에게 10% 추가 할인 → 135,000원. <a href="#/hospital">자세히</a></p>
 
     <div class="block" style="margin-top:32px">
       <h3 class="h3l">26기 주간반 교육 안내</h3>
@@ -1561,7 +1576,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
         <tr><th>정원</th><td>30명 선착순</td></tr>
         <tr><th>장소</th><td>상현동요양보호사교육원 (용인시 수지구 수지로 37 나동 3층, 신분당선 상현역 도보권)</td></tr>
       </table></div>
-      <p class="tbl-note">오전 9시 10분에 시작해 오후 3시 30분에 끝납니다. 저녁 준비 전에 귀가할 수 있어 주부, 은퇴하신 분들이 가장 많이 선택하는 시간대입니다.</p>
+      <p class="tbl-note">오전 9시 10분에 시작해 오후 3시 30분에 끝납니다.<br>저녁 준비 전에 귀가할 수 있어 주부, 은퇴하신 분들이 가장 많이 선택하는 시간대입니다.</p>
     </div>
   </div>
 </section>
@@ -1814,7 +1829,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7 9l2 7 3-7 3 7 2-7M6 12h12"/></svg></span><small>총 교육비</small><b>150,000<em>원</em></b><p>교육·시험·자격증 2종 발급 포함, 추가 비용 없음 · 요양보호사 기수 수강생 135,000원</p></div>
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-2 5 2-1.5-7.5"/></svg></span><small>발급 자격</small><b>등록 민간자격 2종</b><p>당일 수료 후 시험 → 발급 · 병원동행매니저 제2024-004495호 · 생활지원사 제2024-001135호</p></div>
     </div>
-    <p class="tbl-note" style="text-align:center">수강료·시험응시료(30만원 상당)는 교육원이 자체 지원합니다. 수강생 부담은 자격증 발급비뿐입니다. 발급기관 주식회사 금원.</p>
+    <p class="tbl-note" style="text-align:center">수강료·시험응시료(30만원 상당)는 교육원이 자체 지원합니다.<br>수강생 부담은 자격증 발급비뿐입니다.<br>발급기관 주식회사 금원.</p>
     <div class="hs-mid rv-in"><a class="btn btn-pink" href="tel:031-262-1514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 교육비 포함 내역 확인</a><a class="btn btn-kakao" href="https://open.kakao.com/o/sd4JQ3Ci" target="_blank" rel="noopener">카카오톡으로 문의</a></div>
   </div>
 </section>

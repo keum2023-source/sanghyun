@@ -1638,5 +1638,24 @@ function goContact(e){e.preventDefault();if(location.hash&&location.hash!=='#/')
 <script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=sovbeMj" charset="UTF-8"></script>
 <!-- MR Script END Ver 2.0 -->
 
+<!-- Naver Analytics -->
+<script type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "1c3ca9b060df280";
+if(window.wcs) { wcs_do(); }
+/* 메뉴 이동(#/intro 등)도 페이지뷰로 집계 */
+window.addEventListener('hashchange',function(){ try{ if(window.wcs){ wcs_do(); } }catch(e){} });
+/* 전화·카톡 버튼 클릭 이벤트 */
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a'); if(!a) return;
+  var h=a.getAttribute('href')||'', ev='';
+  if(h.indexOf('tel:')===0) ev='전화클릭';
+  else if(h.indexOf('open.kakao.com')>-1) ev='카톡클릭';
+  if(ev){ try{ if(window.wcs&&wcs.event){ wcs.event(ev, location.hash||'#/'); } }catch(e2){} }
+});
+</script>
+<!-- Naver Analytics END -->
+
 </body>
 </html>

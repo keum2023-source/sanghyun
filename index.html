@@ -1258,14 +1258,6 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
   .cert-common dl{grid-template-columns:1fr;gap:0}
   .cert-common dd{margin-bottom:8px}
   .us-grid{grid-template-columns:1fr!important}
-  .cmp-wrap{overflow:visible!important}
-  table.cmp2,table.cmp2 tbody{display:block;min-width:0!important;width:100%}
-  table.cmp2 thead{display:none}
-  table.cmp2 tr{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden;background:#fff}
-  table.cmp2 th{grid-column:1/-1;text-align:left!important;padding:10px 14px!important;background:var(--navy)!important;color:#fff!important}
-  table.cmp2 th br{display:none}
-  table.cmp2 td{display:block;padding:10px 14px!important;text-align:left!important;font-size:.95rem}
-  table.cmp2 td::before{content:attr(data-label);display:block;font-size:.78rem;color:var(--ink-2);font-weight:700;margin-bottom:3px}
   .cmp-sum{grid-template-columns:1fr 1fr 1fr!important}
   .hs-certs{grid-template-columns:1fr 1fr!important;gap:10px}
   .hs-certs img{width:100%!important;height:auto!important}
@@ -1291,6 +1283,17 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
 }
 @media(max-width:860px){.cert-cta .btn-gold{display:block;max-width:100%;box-sizing:border-box;white-space:normal;text-align:center;padding-inline:16px}}
 @media(max-width:860px){.cert-cta .btn-gold{box-sizing:border-box!important;width:100%!important;padding:13px 16px!important}}
+
+@media(max-width:860px){
+  .cmp-wrap{overflow:visible!important;margin-inline:0!important}
+  table.cmp2{width:100%!important;min-width:0!important;table-layout:fixed;font-size:.84rem}
+  table.cmp2 th:first-child{width:24%}
+  table.cmp2 th,table.cmp2 td{padding:11px 6px!important;word-break:keep-all;line-height:1.45}
+  table.cmp2 thead th{font-size:.84rem}
+  table.cmp2 thead small{display:block;font-size:.72rem}
+  table.cmp2 tbody th{font-size:.84rem}
+}
+@media(max-width:860px){table.cmp2 thead th{white-space:normal!important;word-break:keep-all}table.cmp2 thead th:first-child{width:21%}table.cmp2 thead th:nth-child(2){width:35%}}
 </style>
 
 
@@ -2174,14 +2177,14 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
     <p class="cmp-lead">혼자 영상을 반복해서 듣는 대신, 궁금한 점은 바로 묻고 실제 상황에 필요한 내용을 중심으로 배웁니다.</p>
     <div class="cmp-wrap rv-in">
       <table class="cmp2">
-        <thead><tr><th>비교 항목</th><th>일반 온라인 과정<small>기관별 상이</small></th><th>상현동요양보호사교육원</th></tr></thead>
+        <thead><tr><th>비교 항목</th><th>일반 온라인 과정<small>기관별 상이</small></th><th>상현동<wbr>요양보호사교육원</th></tr></thead>
         <tbody>
-          <tr><th>교육 방식</th><td data-label="일반 온라인 과정">녹화 영상 시청<br>혼자 학습</td><td data-label="상현동요양보호사교육원">대면 강의<br>질문 즉시 해결</td></tr>
-          <tr><th>수강 일정</th><td data-label="일반 온라인 과정">과정별 상이</td><td data-label="상현동요양보호사교육원">토요일 하루 5시간</td></tr>
-          <tr><th>과정 구성</th><td data-label="일반 온라인 과정">과정별 상이</td><td data-label="상현동요양보호사교육원">2개 과정 함께 진행</td></tr>
-          <tr><th>비용</th><td data-label="일반 온라인 과정">과정별 상이</td><td data-label="상현동요양보호사교육원">자격증 발급비 2종 150,000원<br><small>수강료·시험료 교육원 지원</small></td></tr>
-          <tr><th>평가 방식</th><td data-label="일반 온라인 과정">과정별 상이</td><td data-label="상현동요양보호사교육원">당일 현장 시험</td></tr>
-          <tr><th>강사</th><td data-label="일반 온라인 과정">기관별 상이</td><td data-label="상현동요양보호사교육원">대표원장 직강<br><small>사회복지학 박사</small></td></tr>
+          <tr><th>교육 방식</th><td data-label="일반 온라인 과정">녹화 영상 시청<br>혼자 학습</td><td data-label="상현동요양보호사교육원">대면 실무 강의<br>질문 즉시 해결</td></tr>
+          <tr><th>소요 기간</th><td data-label="일반 온라인 과정">과목당 1~2주<br>순차 수강</td><td data-label="상현동요양보호사교육원">단 하루 5시간</td></tr>
+          <tr><th>취득 자격</th><td data-label="일반 온라인 과정">1과목씩 별도 수강</td><td data-label="상현동요양보호사교육원">2개 자격 동시 취득</td></tr>
+          <tr><th>자격증<br>발급비</th><td data-label="일반 온라인 과정">과목별 별도 발급비</td><td data-label="상현동요양보호사교육원">2개 150,000원<br><s>정가 180,000원</s></td></tr>
+          <tr><th>평가</th><td data-label="일반 온라인 과정">수강 후 온라인 시험</td><td data-label="상현동요양보호사교육원">당일 현장 시험<br>바로 응시 · 결과 확인</td></tr>
+          <tr><th>강사</th><td data-label="일반 온라인 과정">영상 속 강사</td><td data-label="상현동요양보호사교육원">사회복지학 박사<br>방문요양센터 운영 대표 직강</td></tr>
         </tbody>
       </table>
     </div>

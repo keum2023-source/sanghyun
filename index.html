@@ -1572,6 +1572,61 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
 #p-hospital .why-text p{text-align:center;margin:0 0 8px;word-break:keep-all}
 @media(max-width:860px){#p-hospital .why-text{text-align:left}#p-hospital .why-text p{text-align:left}}
 
+
+/* cert poster v97 */
+.cp-head{margin-bottom:28px}
+.cp-plate{display:inline-block;background:linear-gradient(90deg,#B8912F,#F3DCA0,#B8912F);color:var(--navy);font-weight:900;font-size:.82rem;letter-spacing:.14em;padding:7px 22px;border-radius:4px;position:relative;margin-bottom:14px}
+.cp-plate:before,.cp-plate:after{content:"";position:absolute;top:50%;width:60px;height:1px;background:linear-gradient(90deg,transparent,#D4AF5A);}
+.cp-plate:before{right:100%;margin-right:12px}
+.cp-plate:after{left:100%;margin-left:12px;transform:scaleX(-1)}
+.hs-cert .hs-head h2.cp-title{font-size:clamp(2rem,4.4vw,3.2rem)!important;letter-spacing:.06em;font-weight:900;text-shadow:0 4px 14px rgba(0,0,0,.35);margin:0 0 6px}
+.cp-sub{font-family:"Noto Serif KR",serif;color:#F3DCA0!important;font-size:1.25rem;font-weight:700;letter-spacing:.08em;margin:0 0 10px!important}
+.cp-sub i{font-style:normal;font-size:.7em;color:#D4AF5A;margin:0 8px}
+.cp-note{font-size:.9rem;color:#C6D3DF!important}
+.hs-cert .cp-head .hs-num{display:none}
+.cert2p{grid-template-columns:1fr 1fr;gap:26px;max-width:1000px}
+.certp{position:relative;background:#FBF8F0;color:var(--navy);border-radius:22px 22px 22px 60px;padding:34px 30px 26px;box-shadow:0 0 0 1.5px #D4AF5A,0 0 0 5px #132B40,0 0 0 6.5px rgba(212,175,90,.55),0 24px 50px rgba(0,0,0,.4);overflow:hidden}
+.certp:after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(212,175,90,.25);box-shadow:0 0 0 14px rgba(212,175,90,.08),0 0 0 28px rgba(212,175,90,.05);pointer-events:none}
+.cp-ribbon{position:absolute;top:-6px;right:26px;width:118px;padding:18px 8px 16px;background:linear-gradient(180deg,#1E3A54,#132B40);color:#fff;text-align:center;clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%);box-shadow:0 10px 24px rgba(0,0,0,.35);border-left:1px solid rgba(243,220,160,.5);border-right:1px solid rgba(243,220,160,.5)}
+.cp-rb1{display:block;font-size:.72rem;font-weight:800;letter-spacing:.02em;padding-bottom:4px;border-bottom:1px solid rgba(243,220,160,.45);margin-bottom:4px}
+.cp-rb2{display:block;font-size:.72rem;color:#F3DCA0;font-weight:700;margin-bottom:8px}
+.cp-ribbon svg{display:block;margin:0 auto}
+.cp-tag{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.cp-tagic{width:34px;height:34px;border-radius:50%;border:1.5px solid #D4AF5A;display:inline-flex;align-items:center;justify-content:center;color:#B8912F;background:#fff}
+.cp-name{font-family:"Noto Serif KR",serif;font-size:clamp(2rem,3.6vw,2.7rem);font-weight:900;letter-spacing:.04em;line-height:1.2;margin:0 0 14px;padding-right:140px;word-break:keep-all}
+.cp-div{height:1px;background:linear-gradient(90deg,#D4AF5A,#E6D6A6,#D4AF5A);position:relative;margin:0 0 22px;width:calc(100% - 140px)}
+.cp-div i{position:absolute;left:50%;top:-5px;transform:translateX(-50%) rotate(45deg);width:9px;height:9px;background:#D4AF5A}
+.cp-no{margin:0 0 20px auto;width:max-content;max-width:100%;background:#F2E9D0;border:1.5px solid #D4AF5A;border-radius:10px;padding:10px 26px;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:.06em;color:var(--navy);font-variant-numeric:tabular-nums}
+.cp-law{font-size:.92rem;line-height:1.7;color:var(--ink);margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid #E6D6A6;word-break:keep-all}
+.cp-rows{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.cp-rows li{display:flex;align-items:center;gap:12px;font-size:.98rem}
+.cp-rows b{color:var(--navy);min-width:94px}
+.cp-rows i{width:1px;height:16px;background:#D4AF5A;opacity:.7}
+.cp-rows span:last-child{color:var(--ink)}
+.cp-ic{width:34px;height:34px;border-radius:50%;background:linear-gradient(145deg,#1E3A54,#132B40);color:#F3DCA0;display:inline-flex;align-items:center;justify-content:center;flex:none;border:1px solid #D4AF5A}
+.cp-ic svg{width:17px;height:17px}
+.hs-cert .cert-cta{margin-top:26px}
+@media(max-width:860px){
+  .cert2p{gap:22px}
+  .certp{padding:26px 18px 20px;border-radius:16px 16px 16px 40px;box-shadow:0 0 0 1.5px #D4AF5A,0 0 0 4px #132B40,0 0 0 5px rgba(212,175,90,.55),0 16px 30px rgba(0,0,0,.4)}
+  .cp-ribbon{width:96px;right:14px;padding:14px 6px 12px}
+  .cp-rb1,.cp-rb2{font-size:.64rem}
+  .cp-ribbon svg{width:46px}
+  .cp-name{font-size:1.75rem;padding-right:108px}
+  .cp-div{width:calc(100% - 108px)}
+  .cp-no{font-size:1.5rem;padding:8px 18px;margin-top:6px}
+  .cp-law{font-size:.85rem}
+  .cp-rows li{font-size:.9rem;gap:8px}
+  .cp-rows b{min-width:84px}
+  .cp-ic{width:30px;height:30px}
+  .cp-plate:before,.cp-plate:after{width:28px}
+  .hs-cert .hs-head h2.cp-title{font-size:1.9rem!important}
+  .cp-sub{font-size:1.05rem}
+}
+
+.cp-ribbon{width:138px;padding:18px 6px 16px}.cp-rb1{font-size:.74rem;letter-spacing:0}.cp-name{padding-right:150px}.cp-div{width:calc(100% - 150px)}@media(max-width:860px){.cp-ribbon{width:104px}.cp-rb1{font-size:.6rem}.cp-name{padding-right:112px}.cp-div{width:calc(100% - 112px)}}
+@media(max-width:860px){.cp-name{font-size:1.5rem;letter-spacing:0;padding-right:112px}.cp-rows b{min-width:0;white-space:nowrap;font-size:.88rem}.cp-rows span:last-child{font-size:.88rem}.cp-rows li{align-items:flex-start}.cp-ic{margin-top:-2px}}@media(max-width:400px){.cp-name{font-size:1.35rem}}
+@media(max-width:860px){.cp-rows li{display:grid;grid-template-columns:30px auto 1px 1fr;column-gap:8px;align-items:center}.cp-rows i{height:14px}.cp-rows span:last-child{word-break:keep-all;line-height:1.4}}
 </style>
 
 
@@ -2463,29 +2518,27 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
 
 <section class="hs-cert" id="hosp-cert">
   <div class="wrap">
-    <div class="hs-head"><span class="hs-num">05</span><h2>신청 전, 자격 등록정보를 직접 확인하세요</h2><p class="cert-kind"><span>등록 민간자격</span>한국직업능력연구원에 등록된 민간자격입니다 · 국가자격과는 다릅니다</p></div>
-    <div class="cert2">
-      <div class="cert rv-in">
-        <div class="c-tag"><i>✓</i>등록 민간자격 · 등록번호</div>
-        <p class="c-name">병원동행매니저</p>
-        <span class="c-no"><small>등록번호</small>2024-004495</span>
+    <div class="hs-head cp-head"><span class="cp-plate">등록 민간자격 안내</span><h2 class="cp-title">한국직업능력연구원</h2><p class="cp-sub"><i>◆</i> 정식 등록 민간자격 과정 <i>◆</i></p><p class="cp-note">신청 전, 자격 등록정보를 직접 확인하세요 · 국가자격과는 다릅니다</p></div>
+    <div class="cert2 cert2p">
+      <div class="certp rv-in">
+        <div class="cp-ribbon"><span class="cp-rb1">한국직업능력연구원</span><span class="cp-rb2">등록 민간자격</span><svg viewBox="0 0 60 18" width="60" height="18" fill="none" stroke="#E9CD86" stroke-width="1.4" stroke-linecap="round"><path d="M30 16c-8 0-14-4-18-12M30 16c8 0 14-4 18-12"/><path d="M14 8l-3-1M17 11l-3 1M20 13l-2 2M24 15l-1 2M46 8l3-1M43 11l3 1M40 13l2 2M36 15l1 2"/></svg></div>
+        <div class="cp-tag"><span class="cp-tagic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 8 7 9.5 4-1.5 7-5 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg></span>자격증 등록번호</div>
+        <p class="cp-name">병원동행매니저</p>
+        <div class="cp-div"><i></i></div>
+        <div class="cp-no">2024-004495</div>
+        <p class="cp-law">본 자격은 자격기본법 제17조에 따라 국무총리 산하 국책연구기관인 한국직업능력연구원에 등록된 민간자격이며, 주식회사 금원이 자격 관리와 발급을 직접 운영합니다.</p>
+        <ul class="cp-rows"><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18L12 4z"/><path d="M5 10v8M9 10v8M15 10v8M19 10v8"/><path d="M3 20h18"/></svg></span><b>주무부처기관</b><i></i><span>보건복지부</span></li><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4"/><path d="M14 10h4M14 13h4"/></svg></span><b>자격등록기관</b><i></i><span>한국직업능력연구원</span></li><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 7.5 21l4.5-2.5L16.5 21 15 13.5"/></svg></span><b>자격발급기관</b><i></i><span>주식회사 금원</span></li><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19c.6-3 2.8-4.5 6-4.5s5.4 1.5 6 4.5"/><path d="M15.5 14.5c2.6.2 4.3 1.5 4.9 4"/></svg></span><b>교육운영기관</b><i></i><span>주식회사 금원 · 상현동요양보호사교육원</span></li></ul>
       </div>
-      <div class="cert rv-in">
-        <div class="c-tag"><i>✓</i>등록 민간자격 · 등록번호</div>
-        <p class="c-name">생활지원사</p>
-        <span class="c-no"><small>등록번호</small>2024-001135</span>
+      <div class="certp rv-in">
+        <div class="cp-ribbon"><span class="cp-rb1">한국직업능력연구원</span><span class="cp-rb2">등록 민간자격</span><svg viewBox="0 0 60 18" width="60" height="18" fill="none" stroke="#E9CD86" stroke-width="1.4" stroke-linecap="round"><path d="M30 16c-8 0-14-4-18-12M30 16c8 0 14-4 18-12"/><path d="M14 8l-3-1M17 11l-3 1M20 13l-2 2M24 15l-1 2M46 8l3-1M43 11l3 1M40 13l2 2M36 15l1 2"/></svg></div>
+        <div class="cp-tag"><span class="cp-tagic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M4 20c0-3 2-5 4-5h8c2 0 4 2 4 5"/><path d="M8 13l-3 3M16 13l3 3"/></svg></span>자격증 등록번호</div>
+        <p class="cp-name">생활지원사</p>
+        <div class="cp-div"><i></i></div>
+        <div class="cp-no">2024-001135</div>
+        <p class="cp-law">본 자격은 자격기본법 제17조에 따라 국무총리 산하 국책연구기관인 한국직업능력연구원에 등록된 민간자격이며, 주식회사 금원이 자격 관리와 발급을 직접 운영합니다.</p>
+        <ul class="cp-rows"><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18L12 4z"/><path d="M5 10v8M9 10v8M15 10v8M19 10v8"/><path d="M3 20h18"/></svg></span><b>주무부처기관</b><i></i><span>보건복지부</span></li><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4"/><path d="M14 10h4M14 13h4"/></svg></span><b>자격등록기관</b><i></i><span>한국직업능력연구원</span></li><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 7.5 21l4.5-2.5L16.5 21 15 13.5"/></svg></span><b>자격발급기관</b><i></i><span>주식회사 금원</span></li><li><span class="cp-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19c.6-3 2.8-4.5 6-4.5s5.4 1.5 6 4.5"/><path d="M15.5 14.5c2.6.2 4.3 1.5 4.9 4"/></svg></span><b>교육운영기관</b><i></i><span>주식회사 금원 · 상현동요양보호사교육원</span></li></ul>
       </div>
     </div>
-    <div class="cert-common rv-in"><b>두 자격 공통 정보</b>
-      <dl>
-          <dt>주무부처</dt><dd>보건복지부</dd>
-          <dt>자격등록기관</dt><dd>한국직업능력연구원</dd>
-          <dt>자격발급기관</dt><dd>주식회사 금원</dd>
-          <dt>교육운영기관</dt><dd>주식회사 금원 · 상현동요양보호사교육원</dd>
-        </dl>
-      <p>상현동요양보호사교육원을 운영하는 주식회사 금원이 두 민간자격의 발급기관입니다.</p>
-    </div>
-    <p class="cert-law rv-in">본 자격은 자격기본법 제17조에 따라 국무총리 산하 국책연구기관인 한국직업능력연구원에 등록된 민간자격이며, 주식회사 금원이 자격 관리와 발급을 직접 운영합니다.</p>
     <div class="cert-cta rv-in">
       <a class="btn-gold" href="https://www.pqi.or.kr" target="_blank" rel="noopener">민간자격정보서비스에서 <span class="nowrap">등록정보 확인 →</span></a>
       <small>pqi.or.kr 접속 → 민간자격 검색 → 등록번호 입력. 검색되면 정식 등록 자격입니다.</small>

@@ -2498,6 +2498,70 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
   #contact .sm-btn { border-radius: 999px; }
 }
 
+/* ===== PC: 과정 소개부터 아래 구간도 카드형으로 풍성하게 (2026-11-18, 문구 변경 없음) ===== */
+@media (min-width: 901px) {
+  /* 과정 2개: 번호 + 둥근 사진 + 베이지 카드 안에 항목을 흰 칸 2줄로 */
+  #programs { counter-reset: smprog; }
+  #programs .sm-care-head { margin-bottom: 72px; }
+  #programs .sm-row { counter-increment: smprog; gap: 56px; align-items: stretch; grid-template-columns: 1fr 1.15fr; }
+  #programs .sm-row.sm-flip { grid-template-columns: 1.15fr 1fr; }
+  #programs .sm-row + .sm-row { margin-top: 96px; }
+  #programs .sm-row-photo { position: relative; margin: 0; }
+  #programs .sm-row-photo img { display: block; height: 100%; min-height: 520px; aspect-ratio: auto; border-radius: 24px; }
+  #programs .sm-row-photo::before { content: "0" counter(smprog); position: absolute; left: 22px; top: 22px; z-index: 1; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--s-navy); color: #fff; font-family: var(--s-latin); font-style: italic; font-size: 24px; box-shadow: 0 6px 18px rgba(19,43,64,.28); }
+  #programs .sm-photo-note { position: absolute; left: 20px; bottom: 20px; margin: 0; padding: 7px 16px; border-radius: 999px; background: rgba(20,20,20,.58); color: #fff; font-size: 14px; }
+  #programs .sm-row-txt { padding: 44px 40px 38px; border-radius: 24px; background: var(--s-soft); }
+  .sm #programs .sm-row-txt h3 { margin-top: 14px; color: var(--s-navy); }
+  #programs .sm-row-txt > p.sm-badge { border-radius: 12px; background: #fff; }
+  #programs .sm-list { margin-top: 26px; border-top: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  #programs .sm-list li { position: relative; padding: 16px 16px 15px 34px; border: 1px solid var(--s-line); border-radius: 16px; background: #fff; line-height: 1.45; }
+  #programs .sm-list li::before { content: ""; position: absolute; left: 16px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: var(--s-accent); }
+  #programs .sm-list small { margin-top: 5px; font-size: 14.5px; line-height: 1.6; }
+  #programs .sm-row-links { margin-top: 26px; gap: 10px; }
+  #programs .sm-row-links .sm-text-link { min-height: 54px; padding: 0 26px; border: 1px solid var(--s-navy); border-radius: 999px; background: var(--s-navy); color: #fff; }
+  #programs .sm-row-links .sm-sub-link { background: #fff; color: var(--s-navy); }
+  #programs .sm-row-links .sm-text-link:hover { background: #fff; color: var(--s-navy); }
+  #programs .sm-row-links .sm-sub-link:hover { background: var(--s-navy); color: #fff; }
+
+  /* 수료 후 길(남색) · 함께 운영하는 곳(흰색) 카드 두 개 */
+  #programs .sm-scope { margin-top: 96px; padding-top: 0; border-top: 0; gap: 20px; }
+  #programs .sm-scope > div { padding: 40px 40px 36px; border: 1px solid var(--s-line); border-radius: 24px; background: #fff; }
+  #programs .sm-scope > div:first-child { background: var(--s-navy); border-color: var(--s-navy); }
+  .sm #programs .sm-scope h3 { font-size: 20px; }
+  .sm #programs .sm-scope > div:first-child h3 { color: #fff; }
+  #programs .sm-scope > div:first-child ul { grid-template-columns: 1fr 1fr; gap: 0 28px; margin-top: 14px; }
+  #programs .sm-scope > div:first-child li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); color: #fff; font-weight: 600; }
+  #programs .sm-scope > div:first-child li small { margin-top: 3px; color: rgba(255,255,255,.72); font-weight: 400; }
+
+  /* 대표원장: 둥근 사진 + 경력·운영 기록 흰 카드, 숫자는 칸마다 */
+  #why .sm-philo-photo img { border-radius: 24px; }
+  #why .sm-cred { border-top: 0; padding-top: 0; gap: 16px; }
+  #why .sm-cred > div { padding: 28px 26px; border-radius: 20px; background: #fff; }
+  #why .sm-cred ul { gap: 0; }
+  #why .sm-cred ul li { position: relative; padding: 10px 0 10px 18px; border-bottom: 1px solid var(--s-line); }
+  #why .sm-cred ul li:last-child { border-bottom: 0; }
+  #why .sm-cred ul li::before { content: ""; position: absolute; left: 0; top: 21px; width: 6px; height: 6px; border-radius: 50%; background: var(--s-accent); }
+  #why .sm-trust { gap: 10px; }
+  #why .sm-trust > div { padding: 16px 16px 14px; border-radius: 14px; background: var(--s-soft); }
+  #why .sm-trust dd { color: var(--s-navy); }
+
+  /* 후기·사진: 둥근 모서리 */
+  #reviews .sm-rv-card { border-radius: 20px; }
+  #reviews .sm-gallery figure { border-radius: 16px; }
+  #reviews .sm-rv-foot .sm-btn { border-radius: 999px; }
+
+  /* 수강 안내: 단계 카드, 일정표·질문 둥근 카드 */
+  #admission .sm-flow { display: grid; gap: 12px; }
+  #admission .sm-flow li { padding: 24px 26px 24px 78px; border: 1px solid var(--s-line); border-radius: 18px; background: #fff; }
+  #admission .sm-flow li::before { left: 26px; top: 21px; }
+  #admission .sm-flow li::after { display: none; }
+  #admission .sm-facts { border-radius: 24px; }
+  #admission .sm-facts-btn, #admission .sm-cta-line .sm-btn { border-radius: 999px; }
+  #admission .sm-more { border-top: 0; }
+  #admission .sm-more details { margin-bottom: 10px; padding: 0 26px; border: 1px solid var(--s-line); border-radius: 16px; background: #fff; }
+  #contact .sm-btn { border-radius: 999px; }
+}
+
 /* ===================================================================
    병원동행매니저·생활지원사 상세페이지 — 새 홈 디자인으로 재구성 (문구·구조는 그대로, 스타일만)
    모든 규칙은 #p-hospital 안에서만 적용

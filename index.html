@@ -2209,7 +2209,10 @@ footer.smf { background: var(--s-dark); color: var(--s-on-dark-2); padding: 72px
 .smd-x:hover { color: var(--s-text); }
 body.smd-on { padding-bottom: 96px; }
 body.smd-on .totop { bottom: 112px; }
-@media (prefers-reduced-motion: reduce) { .smd, .sm-hx-media img { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .smd { transition: none; } }
+/* 동작 줄이기 설정: 움직임 없이 서서히 나타남 (사진 전환·카드 밝아짐은 색·투명도만 바뀌어 그대로 둠) */
+body.sm-calm .sm-up.sm-pre { transform: none; }
+body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
 
 /* 기존 하단 띠 정리: 병원동행 페이지 PC 고정 띠는 새 상담 배너로 대체 */
 .hs-fixbar { display: none !important; }
@@ -2430,6 +2433,69 @@ body.smd-on .totop { bottom: 112px; }
 }
 @media (max-width: 900px) {
   .smh-nav > a:not(.smh-cta), .smh-dd { display: block; }
+}
+
+/* ===== 휴대폰: 과정 소개부터 아래 구간도 첫 화면처럼 카드형으로 (2026-11-18, 문구 변경 없음) ===== */
+@media (max-width: 900px) {
+  /* 과정 2개: 큰 번호 + 둥근 사진(설명은 사진 위 작은 띠) + 연한 베이지 카드 */
+  #programs { counter-reset: smprog; }
+  #programs .sm-care-head { margin-bottom: 44px; }
+  #programs .sm-row { counter-increment: smprog; gap: 0; }
+  #programs .sm-row + .sm-row { margin-top: 56px; }
+  #programs .sm-row-photo { position: relative; margin: 0; }
+  #programs .sm-row-photo img { display: block; aspect-ratio: 4 / 3; border-radius: 20px; }
+  #programs .sm-row-photo::before { content: "0" counter(smprog); position: absolute; left: 14px; top: 14px; z-index: 1; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--s-navy); color: #fff; font-family: var(--s-latin); font-style: italic; font-size: 19px; box-shadow: 0 4px 14px rgba(19,43,64,.25); }
+  #programs .sm-photo-note { position: absolute; left: 12px; bottom: 40px; right: 12px; margin: 0; width: max-content; max-width: calc(100% - 24px); padding: 5px 12px; border-radius: 999px; background: rgba(20,20,20,.58); color: #fff; font-size: 12.5px; }
+  #programs .sm-row-txt { position: relative; z-index: 1; margin: -28px 10px 0; padding: 28px 18px 20px; border-radius: 20px; background: var(--s-soft); box-shadow: 0 10px 30px rgba(41,41,41,.07); }
+  .sm #programs .sm-row-txt h3 { margin-top: 10px; color: var(--s-navy); }
+  #programs .sm-row-txt > p.sm-badge { border-radius: 12px; background: #fff; }
+  #programs .sm-list { margin-top: 20px; border-top: 0; display: grid; gap: 8px; }
+  #programs .sm-list li { position: relative; padding: 13px 14px 13px 32px; border: 1px solid var(--s-line); border-radius: 14px; background: #fff; line-height: 1.45; }
+  #programs .sm-list li::before { content: ""; position: absolute; left: 14px; top: 20px; width: 7px; height: 7px; border-radius: 50%; background: var(--s-accent); }
+  #programs .sm-list small { margin-top: 4px; font-size: 14.5px; line-height: 1.6; }
+  #programs .sm-row-links { flex-direction: column; gap: 8px; margin-top: 18px; }
+  #programs .sm-row-links .sm-text-link { justify-content: center; min-height: 54px; padding: 0 18px; border: 1px solid var(--s-navy); border-radius: 999px; background: var(--s-navy); color: #fff; }
+  #programs .sm-row-links .sm-sub-link { background: #fff; color: var(--s-navy); }
+
+  /* 수료 후 길 · 함께 운영하는 곳: 남색 카드 + 흰 카드 */
+  #programs .sm-scope { margin-top: 56px; padding-top: 0; border-top: 0; gap: 12px; }
+  #programs .sm-scope > div { padding: 26px 20px 22px; border: 1px solid var(--s-line); border-radius: 20px; background: #fff; }
+  #programs .sm-scope > div:first-child { background: var(--s-navy); border-color: var(--s-navy); }
+  .sm #programs .sm-scope > div:first-child h3 { color: #fff; font-size: 18px; }
+  #programs .sm-scope > div:first-child ul { gap: 0; margin-top: 10px; }
+  #programs .sm-scope > div:first-child li { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.14); color: #fff; font-weight: 600; }
+  #programs .sm-scope > div:first-child li:last-child { border-bottom: 0; padding-bottom: 0; }
+  #programs .sm-scope > div:first-child li small { margin-top: 2px; color: rgba(255,255,255,.72); font-weight: 400; }
+  .sm #programs .sm-scope > div:last-child h3 { font-size: 18px; }
+
+  /* 대표원장: 둥근 사진 + 경력·운영 기록을 흰 카드로, 숫자는 칸마다 */
+  #why .sm-philo-photo img { border-radius: 20px; }
+  #why .sm-cred { border-top: 0; padding-top: 0; gap: 12px; }
+  #why .sm-cred > div { padding: 22px 18px; border-radius: 20px; background: #fff; }
+  #why .sm-cred ul { gap: 0; }
+  #why .sm-cred ul li { position: relative; padding: 9px 0 9px 18px; border-bottom: 1px solid var(--s-line); }
+  #why .sm-cred ul li:last-child { border-bottom: 0; }
+  #why .sm-cred ul li::before { content: ""; position: absolute; left: 0; top: 19px; width: 6px; height: 6px; border-radius: 50%; background: var(--s-accent); }
+  #why .sm-trust { gap: 8px; }
+  #why .sm-trust > div { padding: 14px 14px 12px; border-radius: 14px; background: var(--s-soft); }
+  #why .sm-trust dd { color: var(--s-navy); }
+
+  /* 후기·사진: 모서리 둥글게 */
+  #reviews .sm-rv-card { border-radius: 18px; }
+  #reviews .sm-gallery figure { border-radius: 12px; }
+  #reviews .sm-rv-foot .sm-btn { border-radius: 999px; }
+
+  /* 수강 안내: 단계마다 흰 카드, 일정표·질문도 둥근 카드 */
+  #admission .sm-flow { display: grid; gap: 10px; }
+  #admission .sm-flow li { padding: 20px 18px 20px 62px; border: 1px solid var(--s-line); border-radius: 16px; background: #fff; }
+  #admission .sm-flow li::before { left: 18px; top: 17px; }
+  #admission .sm-flow li::after { display: none; }
+  #admission .sm-facts { border-radius: 20px; }
+  #admission .sm-facts-btn, #admission .sm-cta-line .sm-btn { border-radius: 999px; }
+  #admission .sm-more { border-top: 0; }
+  #admission .sm-more details { margin-bottom: 8px; padding: 0 18px; border: 1px solid var(--s-line); border-radius: 14px; background: #fff; }
+  #admission .sm-more summary { padding: 18px 0; }
+  #contact .sm-btn { border-radius: 999px; }
 }
 
 /* ===================================================================
@@ -3825,7 +3891,7 @@ document.addEventListener('click',function(e){
     dots.forEach(function (d, i) { d.addEventListener('click', function () { show(i); }); });
     box.addEventListener('mouseenter', function () { hold = true; });
     box.addEventListener('mouseleave', function () { hold = false; });
-    if (!reduce.matches) setInterval(function () { if (!hold && !document.hidden && onHome() && window.scrollY < innerHeight) show(at + 1); }, 6000);
+    setInterval(function () { if (!hold && !document.hidden && onHome() && window.scrollY < innerHeight) show(at + 1); }, 6000);
   }
 
   // OUR PHILOSOPHY 배경: 첫 화면 2번 사진(실제 강의실)을 그대로 씀 — 같은 사진을 두 번 넣지 않으려고 주소만 복사
@@ -3836,7 +3902,6 @@ document.addEventListener('click',function(e){
   var cards = [].slice.call(document.querySelectorAll('.sm-why-col li'));
   function whyUpdate() {
     if (!cards.length) return;
-    if (reduce.matches) { cards.forEach(function (c) { c.classList.add('on'); }); return; }
     var mid = innerHeight / 2, best = null, dist = Infinity;
     cards.forEach(function (c) { var r = c.getBoundingClientRect(); var d = Math.abs(r.top + r.height / 2 - mid); if (d < dist) { dist = d; best = c; } });
     cards.forEach(function (c) { c.classList.toggle('on', c === best); });
@@ -3880,7 +3945,9 @@ document.addEventListener('click',function(e){
   }
 
   // 스크롤 리빌: 아직 화면 아래에 있는 제목·사진만 한 번 떠오르며 나타남. 동작 줄이기 설정이면 없음
-  if (!reduce.matches && 'IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window) {
+    // '동작 줄이기'가 켜진 휴대폰: 위로 떠오르는 움직임 없이 천천히 나타나기만
+    if (reduce.matches) document.body.classList.add('sm-calm');
     var up = [].slice.call(document.querySelectorAll('.sm .sm-up')).filter(function (el) { return el.getBoundingClientRect().top > innerHeight; });
     var upIO = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('sm-in'); upIO.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
     up.forEach(function (el) { el.classList.add('sm-pre'); upIO.observe(el); });

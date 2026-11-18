@@ -23,6 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sanghyuncare.com/og-image.jpg">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>/* 동작 줄이기 설정: 움직임 없이 서서히 나타나기 */@media (prefers-reduced-motion: reduce){.rv-in{opacity:0;transition:opacity .7s ease;transition-delay:var(--d,0ms)}.rv-in.show{opacity:1}}</style>
 </head>
 <body>
 <title>상현동요양보호사교육원</title>
@@ -404,7 +405,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
   .prog-btn{margin-top:6px;padding:7px 10px;font-size:.78rem;white-space:nowrap}
   .prog-btn .full{display:none}.prog-btn .short{display:inline}
 }
-@media (prefers-reduced-motion: reduce){.prog{transition:none}}
+
 
 /* mobile menu */
 .hd-right{display:flex;align-items:center;gap:8px}
@@ -1518,7 +1519,7 @@ footer .copy{margin-top:18px;font-size:.8rem;opacity:.7}
 .rv-track article p{font-size:1rem;line-height:1.65;margin-bottom:10px}
 .rv-track article footer{font-size:.85rem;color:var(--ink-2)}
 @keyframes rvRun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.rv-track{animation:none}.hs-hero-dark .hs-big b,.laurel .lau-in b{animation:none}}
+
 /* PC fixed bar */
 .hs-fixbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(19,43,64,.96);color:#fff;border-top:2px solid #D4AF5A;transform:translateY(110%);transition:transform .35s ease;box-shadow:0 -10px 30px rgba(0,0,0,.3)}
 .hs-fixbar.show{transform:translateY(0)}
@@ -1700,7 +1701,7 @@ html,body{background:#fff;color:var(--ink)}
 .urgent-txt{color:#E8632B;font-weight:800}
 .st-badge.st-urgent,.hs-final-info .st.st-urgent{background:#E8632B!important;color:#fff!important;animation:urgPulse 1.6s ease-in-out infinite}
 @keyframes urgPulse{0%,100%{box-shadow:0 0 0 0 rgba(232,99,43,.55)}50%{box-shadow:0 0 0 7px rgba(232,99,43,0)}}
-@media(prefers-reduced-motion:reduce){.tag-urgent,.st-urgent{animation:none}}
+
 
 
 /* 지난 교육 현장 (2026-10-31) */
@@ -1743,7 +1744,7 @@ html,body{background:#fff;color:var(--ink)}
   .ledu-gal img:hover{transform:none}
   .ledu-gal figcaption{position:static;background:none;color:var(--ink-2);padding:8px 2px 0;font-size:.95rem;text-align:center}
 }
-@media(prefers-reduced-motion:reduce){.ledu-gal img{transition:none}}
+
 /* 09 갤러리: 강사 소개 아래 한 줄, 사진 비율대로 폭을 나눠 자르지 않고 높이 맞춤 */
 .hs-gal3{grid-template-columns:.75fr 1.333fr 1.333fr;gap:12px;margin-top:26px}
 .hs-gal3 figure,.hs-gal3 figure:first-child{grid-column:auto;grid-row:auto}
@@ -2758,8 +2759,8 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
       </div>
       <ul class="sm-hx-list">
         <li><span class="sm-hx-dot">26</span><div><b>요양보호사 26기 주간반</b><small>2026년 11월 4일 개강 · 현재 교육 진행 중</small></div><em>진행 중</em></li>
-        <li class="hl"><span class="sm-hx-dot">다음</span><div><b>다음 기수 주간반</b><small>2027년 개강 예정 · 날짜는 전화로 안내</small></div><a href="tel:0312621514">일정 문의</a></li>
-        <li><span class="sm-hx-dot">토</span><div><b>병원동행매니저 · 생활지원사</b><small>토요일 하루 5시간 · 다음 교육일 전화 문의</small></div><a href="#/hospital">과정 보기</a></li>
+        <li class="hl"><span class="sm-hx-dot">다음</span><div><b>27기 주간반 · 1월 5일(화) 개강</b><small>2027년 1월 5일 ~ 3월 10일 · 09:10~16:30</small></div><a href="tel:0312621514">일정 문의</a></li>
+        <li><span class="sm-hx-dot">토</span><div><b>병원동행매니저 · 생활지원사</b><small>12월 19일(토) 09:00~14:00 · 하루 5시간</small></div><a href="#/hospital">과정 보기</a></li>
       </ul>
       <p class="sm-hx-pnote">사진: 상현동요양보호사교육원 실제 수업 장면</p>
     </div>
@@ -2806,10 +2807,10 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
         <ul class="sm-list">
           <li>국가자격 교육 <small>국가시험은 한국보건의료인국가시험원 시행 (컴퓨터 시험 CBT)</small></li>
           <li>교육시간 <small>이론·실기 240시간 + 현장실습 80시간 = 320시간</small></li>
-          <li>주간 신규양성반 <small>평일 09:10~15:30 · 약 8주 · 정원 30명</small></li>
+          <li>주간 신규양성반 <small>평일 09:10~16:30 · 약 8주 · 정원 30명</small></li>
           <li>내일배움카드 국비지원 <small>카드 결제 시 792,000원 (교육비 880,000원)</small></li>
           <li>자격 소지자 감면반 <small>사회복지사·간호사 등 40~50시간 · 야간 운영 · 개설 일정 별도 공지</small></li>
-          <li>개강 일정 <small>26기 주간반 진행 중 · 다음 개강은 2027년 (날짜 전화 문의)</small></li>
+          <li>개강 일정 <small>27기 주간반 2027년 1월 5일(화) 개강 · 3월 10일(수)까지 · 09:10~16:30</small></li>
         </ul>
         <div class="sm-row-links"><a class="sm-text-link" href="#/course">교육과정 자세히 보기 <span aria-hidden="true">→</span></a><a class="sm-text-link sm-sub-link" href="#/caregiver">요양보호사는 어떤 일을 하나요 <span aria-hidden="true">→</span></a></div>
       </div>
@@ -2826,7 +2827,7 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
           <li>운영 방식 <small>토요일 09:00~14:00 · 하루 5시간 · 대표원장 직강 · 당일 시험</small></li>
           <li>자격 <small>한국직업능력연구원 등록 민간자격 2종 (국가자격 아님) · 병원동행매니저 제2024-004495호 · 생활지원사 제2024-001135호</small></li>
           <li>교육비 <small>수강료·시험료(30만원 상당)는 교육원 지원, 수강생 부담은 자격증 발급비 15만원</small></li>
-          <li>다음 교육 <small>일정 확정 전 · 전화 문의</small></li>
+          <li>다음 교육 <small>2026년 12월 19일(토) 09:00~14:00</small></li>
         </ul>
         <div class="sm-row-links"><a class="sm-text-link" href="#/hospital">과정 자세히 보기 <span aria-hidden="true">→</span></a></div>
       </div>
@@ -2945,13 +2946,13 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
       <aside class="sm-facts sm-up" id="next" aria-label="개강·교육비 한눈에 보기">
         <h3>개강·교육비 한눈에 보기</h3>
         <dl>
-          <div><dt>다음 개강</dt><dd><b>2027년 개강 예정 · 날짜는 전화 문의</b><br>26기 주간반은 2026년 11월 4일 개강해 진행 중입니다</dd></div>
+          <div><dt>다음 개강</dt><dd><b>27기 · 2027년 1월 5일(화) 개강</b><br>3월 10일(수)까지 · 09:10~16:30 · 총 44일</dd></div>
           <div><dt>운영반</dt><dd>주간 신규양성반 · 자격증 소지자 감면반(야간, 개설 일정 별도 공지)</dd></div>
           <div><dt>정원</dt><dd>주간반 30명 · 선착순 · 학력 무관</dd></div>
-          <div><dt>교육시간</dt><dd>평일 09:10~15:30 · 320시간(약 8주)<br>일부 날짜·현장실습 시간은 다릅니다</dd></div>
+          <div><dt>교육시간</dt><dd>평일 09:10~16:30 · 320시간(약 8주)<br>일부 날짜·현장실습 시간은 다릅니다</dd></div>
           <div><dt>교육비</dt><dd>880,000원 · 내일배움카드 결제 시 792,000원</dd></div>
           <div><dt>지원 조건</dt><dd>요건 충족 시 훈련장려금 최대 266,800원<br>수료 후 취업·6개월 근속 시 교육비 792,000원 환급</dd></div>
-          <div><dt>하루 과정</dt><dd>병원동행매니저·생활지원사 · 토요일 · 다음 교육일 전화 문의</dd></div>
+          <div><dt>하루 과정</dt><dd>병원동행매니저·생활지원사 · 12월 19일(토) 09:00~14:00</dd></div>
         </dl>
         <p class="sm-formula">카드 결제 792,000원 → 요건 충족 시 전액 환급 + 장려금</p>
         <p>결제 금액에서 바로 빠지는 것이 아니라, 조건을 충족한 경우 따로 받습니다. 적용 여부는 개인별로 다릅니다.</p>
@@ -2991,9 +2992,9 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
       </div></details>
       <h3 id="faq">자주 묻는 질문</h3>
       <details><summary>50~60대에도 요양보호사 자격증 취득이 가능한가요?</summary><p>네. 학력·나이·성별 제한이 없습니다.</p><p>저희 수강생의 주 연령대는 50~70대이고, 80대 수강생도 합격하셨습니다.<br>진도가 어려운 분은 수업 후 개별 보충으로 다시 설명합니다.</p></details>
-      <details><summary>요양보호사 자격증 취득까지 얼마나 걸리나요?</summary><p>처음 배우는 분은 320시간(이론·실기 240시간 + 실습 80시간) 과정으로, 주간반 기준 약 8주입니다.<br>교육기간은 공휴일과 실습 일정에 따라 달라집니다.</p><p>26기 주간반은 2026년 11월 4일 개강해 현재 교육 중이며, 2027년 1월 12일 수료합니다.<br>다음 기수는 2027년에 개강하며, 날짜는 전화로 안내해 드립니다.</p><p>사회복지사·간호사·간호조무사 등 자격 소지자는 40~50시간 감면 과정으로 마칩니다.<br>수료 직후 가장 빠른 국가시험에 응시하도록 일정을 잡아드립니다.</p></details>
+      <details><summary>요양보호사 자격증 취득까지 얼마나 걸리나요?</summary><p>처음 배우는 분은 320시간(이론·실기 240시간 + 실습 80시간) 과정으로, 주간반 기준 약 8주입니다.<br>교육기간은 공휴일과 실습 일정에 따라 달라집니다.</p><p>26기 주간반은 2026년 11월 4일 개강해 현재 교육 중이며, 2027년 1월 12일 수료합니다.<br>다음 27기 주간반은 2027년 1월 5일(화)에 개강해 3월 10일(수)까지 진행합니다.</p><p>사회복지사·간호사·간호조무사 등 자격 소지자는 40~50시간 감면 과정으로 마칩니다.<br>수료 직후 가장 빠른 국가시험에 응시하도록 일정을 잡아드립니다.</p></details>
       <details><summary>내일배움카드로 국비지원 받을 수 있나요?</summary><p>주간 신규양성반은 고용노동부 내일배움카드 국비지원 과정입니다.<br>카드로 결제하면 교육비 880,000원이 792,000원이 됩니다.</p><p>요건을 충족하면 훈련장려금(최대 266,800원)을 별도로 받고, 수료 후 6개월 내 취업해 6개월 근속하면 792,000원을 환급받습니다.<br>두 가지 모두 결제 금액에서 바로 빠지는 것은 아닙니다.</p><p>카드가 없으면 발급 절차부터 안내해 드립니다.<br>본인이 대상인지는 전화로 확인해 드립니다.</p></details>
-      <details><summary>수업시간은 어떻게 되나요?</summary><p>주간반의 기본 수업시간은 평일 09:10~15:30입니다.<br>일부 날짜(화·목 일부 7시간)와 현장실습 시간은 다릅니다.</p><p>자격증 감면반은 야간에 운영하며 개설 일정은 별도 공지합니다.</p></details>
+      <details><summary>수업시간은 어떻게 되나요?</summary><p>주간반의 기본 수업시간은 평일 09:10~16:30입니다.<br>일부 날짜(화·목 일부 7시간)와 현장실습 시간은 다릅니다.</p><p>자격증 감면반은 야간에 운영하며 개설 일정은 별도 공지합니다.</p></details>
       <details><summary>실습은 어디에서 하나요?</summary><p>협약 실습기관에서 하루 8시간씩 총 80시간 진행합니다.<br>26기 주간반 실습은 12월 29일부터 1월 12일까지입니다.<br>실습 오리엔테이션은 교육원 대표가 직접 4시간 진행합니다.</p></details>
       <details><summary>국가시험은 어떻게 준비하나요?</summary><p>요양보호사 국가시험은 한국보건의료인국가시험원이 시행하며, 컴퓨터로 응시하는 시험(CBT)입니다.</p><p>교육원에서 과목별 모의시험으로 취약 부분을 찾아 반복하고, 시험 접수 방법과 CBT 응시 방법까지 함께 준비합니다.<br>지금까지 저희 교육원에서 응시한 수강생은 전원 합격했습니다.</p></details>
       <details><summary>자격증 취득 후 취업도 도와주시나요?</summary><p>수료생 전용 네이버 밴드에 용인·수지·수원 인근 재가센터·요양시설·주야간보호센터 구인 정보를 올리고, 조건이 맞는 분은 교육원이 연결해 드립니다.<br>취업을 보장하는 것은 아닙니다.</p><p>가족요양을 준비하시면 주식회사 금원이 직영하는 방문요양센터에서 절차를 안내합니다.</p><p>병원동행매니저·생활지원사, 산후관리사(사임당 홈케어) 과정도 안내해 드립니다.</p></details>
@@ -3252,7 +3253,7 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
         <p class="cc-sub">신규자 교육과정 · 320시간</p>
         <p class="cc-t">320<span>시간</span></p>
         <p class="cc-who">처음 자격증을 준비하는 분</p>
-        <ul><li>평일 기본 09:10~15:30 · 약 8주</li><li>이론 126 · 실기 114 · 실습 80</li><li>내일배움카드 국비지원</li></ul>
+        <ul><li>평일 기본 09:10~16:30 · 약 8주</li><li>이론 126 · 실기 114 · 실습 80</li><li>내일배움카드 국비지원</li></ul>
         <b>880,000원 <small>→ 내일배움카드 결제 792,000원</small></b>
         <div class="cc-btns"><a class="btn btn-pink" href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 개강일·교육비 전화 상담</a><a class="btn btn-line" href="https://open.kakao.com/o/sd4JQ3Ci" target="_blank" rel="noopener">카카오톡으로 결제 문의</a></div>
       </div>
@@ -3272,7 +3273,7 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
       <table class="ct" id="ct-table">
         <thead><tr><th>구분</th><th>교육과정</th><th>교육반</th><th>수업기간</th><th>이론</th><th>실기</th><th>실습</th><th>총시간</th></tr></thead>
         <tbody>
-          <tr><td class="cell-tint">신규자</td><td><strong>주간반</strong></td><td>평일 기본 09:10~15:30</td><td>약 8주 (월~금)</td><td class="num">126시간</td><td class="num">114시간</td><td class="num">80시간</td><td class="num"><strong>320시간</strong></td></tr>
+          <tr><td class="cell-tint">신규자</td><td><strong>주간반</strong></td><td>평일 기본 09:10~16:30</td><td>약 8주 (월~금)</td><td class="num">126시간</td><td class="num">114시간</td><td class="num">80시간</td><td class="num"><strong>320시간</strong></td></tr>
           <tr><td class="cell-tint" rowspan="3">자격증반<br><small style="font-weight:400">(경력 감면)</small></td><td><strong>사회복지사반</strong></td><td rowspan="3">야간</td><td rowspan="3">개설 일정 별도 공지</td><td class="num">32시간</td><td class="num">10시간</td><td class="num">8시간</td><td class="num"><strong>50시간</strong></td></tr>
           <tr><td><strong>간호사반</strong></td><td class="num">26시간</td><td class="num">6시간</td><td class="num">8시간</td><td class="num"><strong>40시간</strong></td></tr>
           <tr><td><strong>간호조무사 · 물리치료사 · 작업치료사반</strong></td><td class="num">31시간</td><td class="num">11시간</td><td class="num">8시간</td><td class="num"><strong>50시간</strong></td></tr>
@@ -3320,16 +3321,16 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
     <div class="block" style="margin-top:32px">
       <h3 class="h3l" id="course-schedule">26기 주간반 교육 안내 <small style="font-size:.7em;color:var(--ink-2);font-weight:600">· 현재 교육 진행 중</small></h3>
       <div class="tbl"><table class="kv">
-        <tr><th>기수</th><td>26기 주간 신규양성반 · 올해 마지막 기수 · 현재 교육 진행 중<br>다음 개강은 2027년 (날짜는 전화 문의)</td></tr>
+        <tr><th>기수</th><td>26기 주간 신규양성반 · 올해 마지막 기수 · 현재 교육 진행 중<br>다음 27기는 <span class="nowrap">2027년 1월 5일(화)</span> 개강 (3월 10일(수)까지, 09:10~16:30)</td></tr>
         <tr><th>교육기간</th><td>시작 <span class="nowrap">2026년 11월 4일(수)</span><br>종료 <span class="nowrap">2027년 1월 12일(화)</span></td></tr>
-        <tr><th>기본 수업시간</th><td>평일 <span class="nowrap">09:10~15:30</span> · 훈련 기간 중 평일 휴강 없음</td></tr>
+        <tr><th>기본 수업시간</th><td>평일 <span class="nowrap">09:10~16:30</span> · 훈련 기간 중 평일 휴강 없음</td></tr>
         <tr><th>별도 수업·실습시간</th><td>화·목 일부 날짜는 7시간 수업<br>현장실습 <span class="nowrap">12월 29일~1월 12일</span> (하루 8시간, 협약 기관)</td></tr>
         <tr><th>총 교육시간</th><td>320시간 (이론·실기 240시간 + 실습 80시간)</td></tr>
         <tr><th>정원</th><td>30명 선착순</td></tr>
         <tr><th>장소</th><td>상현동요양보호사교육원 (용인시 수지구 수지로 37 나동 3층, 신분당선 상현역 도보권)</td></tr>
       </table></div>
-      <p class="tbl-note">기본 수업시간은 평일 09:10~15:30입니다. 일부 날짜의 수업시간과 현장실습 시간은 다릅니다.<br class="pc-br"> 등록 전 전체 일정을 확인해 주세요.</p>
-      <div class="sch-cta"><p><b>다음 기수 개강일이 궁금하신가요?</b><br>2027년 개강 일정이 정해지는 대로 전화로 안내해 드립니다.</p><div class="backhome"><a class="btn btn-pink" href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 다음 기수 개강일 전화 문의</a></div></div>
+      <p class="tbl-note">기본 수업시간은 평일 09:10~16:30입니다. 일부 날짜의 수업시간과 현장실습 시간은 다릅니다.<br class="pc-br"> 등록 전 전체 일정을 확인해 주세요.</p>
+      <div class="sch-cta"><p><b>27기 주간반, 2027년 1월 5일(화) 개강합니다</b><br>교육기간 1월 5일(화) ~ 3월 10일(수) · 09:10~16:30 · 총 44일</p><div class="backhome"><a class="btn btn-pink" href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 27기 수강 전화 문의</a></div></div>
     </div>
   </div>
 </section>
@@ -3435,7 +3436,7 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
   <div class="wrap">
     <div class="hs-head"><span class="hs-num">01</span><h2>과정 안내</h2></div>
     <div class="hs-info">
-      <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><small>다음 교육일</small><b>전화로 문의</b><p>다음 교육일은 아직 확정 전입니다.<br><a class="hs-info-tel" href="tel:0312621514">031-262-1514</a>로 일정을 문의해 주세요.</p></div>
+      <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><small>다음 교육일</small><b>12월 19일(토)</b><p>2026년 12월 19일(토) 09:00~14:00 교육입니다.<br><a class="hs-info-tel" href="tel:0312621514">031-262-1514</a>로 신청해 주세요.</p></div>
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><small>교육 시간</small><b>09:00 ~ 14:00</b><p>하루 5시간 · 당일 수료</p></div>
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7 9l2 7 3-7 3 7 2-7M6 12h12"/></svg></span><small>총 교육비</small><b>150,000<em>원</em></b><p>자격증 2종 발급비<br>수강료·시험료(30만원 상당)는 교육원 지원, 수강생 부담은 자격증 발급비 15만원</p></div>
       <div><span class="ic-r"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-2 5 2-1.5-7.5"/></svg></span><small>발급 자격</small><b>등록 민간자격 2종</b><p>교육 당일 시험 · 자격증 수령 시기는 교육 당일 안내<br>병원동행매니저 제2024-004495호<br>생활지원사 제2024-001135호</p></div>
@@ -3461,7 +3462,7 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
       <div class="rv-in"><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/><circle cx="16" cy="15" r="2.5"/></svg></span><b>2개 자격 동시 취득</b><p>병원동행매니저 +<br>생활지원사 한 번에</p></div>
       <div class="rv-in"><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>단 하루 5시간</b><p>토요일 하루로<br>부담 없이 마무리</p></div>
     </div>
-    <div class="g-cta rv-in"><div class="g-cta-t"><b>다음 교육 일정 문의</b><p><span class="nowrap">10월 31일</span> 교육은 정원 40명이 모두 참석했습니다. 다음 교육일은 전화로 안내해 드립니다.</p></div><a href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>다음 교육 일정 전화 문의</a></div>
+    <div class="g-cta rv-in"><div class="g-cta-t"><b>다음 교육 일정 문의</b><p><span class="nowrap">10월 31일</span> 교육은 정원 40명이 모두 참석했습니다. 다음 교육은 <span class="nowrap">12월 19일(토)</span>입니다.</p></div><a href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>다음 교육 일정 전화 문의</a></div>
   </div>
 </section>
 
@@ -3731,12 +3732,12 @@ body.sm-calm .sm-up.sm-in { transform: none; transition: opacity .8s ease; }
   </div>
 </section>
 
-<div class="hs-fixbar" id="hs-fixbar"><div class="wrap"><div class="fb-t"><b>병원동행매니저 · 생활지원사 다음 교육</b><span>일정 확정 전 · 전화로 문의해 주세요</span></div><div class="fb-b"><a class="btn btn-pink" href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 다음 교육 일정 전화 문의</a><a class="btn btn-kakao" href="https://open.kakao.com/o/sd4JQ3Ci" target="_blank" rel="noopener">카카오톡 상담</a></div></div></div>
+<div class="hs-fixbar" id="hs-fixbar"><div class="wrap"><div class="fb-t"><b>병원동행매니저 · 생활지원사 다음 교육</b><span>2026년 12월 19일(토) 09:00~14:00</span></div><div class="fb-b"><a class="btn btn-pink" href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 다음 교육 일정 전화 문의</a><a class="btn btn-kakao" href="https://open.kakao.com/o/sd4JQ3Ci" target="_blank" rel="noopener">카카오톡 상담</a></div></div></div>
 <section class="hs-sec hs-pink" id="hosp-apply">
   <div class="wrap hs-final">
     <div class="hs-head"><span class="hs-num">13</span><h2>상담 및 신청</h2></div>
-    <h3>다음 교육, 미리 문의해 주세요</h3>
-    <p>다음 교육일은 아직 확정되지 않았습니다.<br class="pc-br"> 전화로 문의하시면 일정을 안내해 드립니다.</p>
+    <h3>다음 교육은 12월 19일(토)입니다</h3>
+    <p>2026년 12월 19일(토) 오전 9시 ~ 오후 2시(5시간) 교육입니다.<br class="pc-br"> 전화로 신청하시면 자세히 안내해 드립니다.</p>
     <div class="hs-final-info"><span>다음 교육 <b>일정 문의</b></span><span class="st">전화 상담</span><span>09:00~14:00 · 상현동요양보호사교육원</span></div>
     <div class="hs-cta">
       <a class="btn btn-pink" href="tel:0312621514"><svg class="ph" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg> 다음 교육 일정 전화 문의</a>
@@ -3856,7 +3857,7 @@ function hbGo(n,user){hbTo(hbI+n,user);}
 function hbRestart(){clearInterval(hbT);if(!hbStop)hbT=setInterval(function(){hbGo(1);},7000);}
 function hbToggle(){hbStop=!hbStop;var b=document.getElementById('hb-pause');b.textContent=hbStop?'자동 넘김':'일시정지';b.setAttribute('aria-label',hbStop?'자동 넘김 다시 시작':'자동 넘김 멈춤');hbRestart();}
 (function(){var hb=document.getElementById('hb');if(!hb)return;
-if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){hbStop=true;var b=document.getElementById('hb-pause');if(b)b.textContent='자동 넘김';}
+
 hb.addEventListener('mouseenter',function(){clearInterval(hbT);});hb.addEventListener('mouseleave',hbRestart);
 hb.addEventListener('focusin',function(){clearInterval(hbT);});
 var x0=null,y0=null;hb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY;clearInterval(hbT);},{passive:true});
